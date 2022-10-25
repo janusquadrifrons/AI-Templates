@@ -57,3 +57,33 @@ Samples for rapid model development.
     ```
     <sub>Notation : C ← convolutional layer ,D ← droput layer, P ← maxpooling layer, H ← hidden layer, F ← flattening layer.</sub>
     
+## NLP
+
+#### parser.py
+  An assignment (week 6) from AI50.
+  - Function          : Parsnig sentences and extracting context-free grammar by (nltk.punkt) tokenization.
+  - Usage             : Keyboard input or path of .txt file as argument.
+  - Dependencies      : nltk<br>
+    ↳ pip3 install <em>"dependency"</em><br>
+    ↳ import nltk # in case of missing data load nltk data downloader<br>
+    ↳ nltk.donwload()<br>
+    
+    ##### Example :    
+    ```
+    PS E:\98_Cs\cs50\lecture_6\parser> python parser.py sentences/9.txt
+                                            S
+          __________________________________|____________
+         S                                             ConjP
+      ___|_________                                 _____|_________
+     |            Pred                             |               VP
+     |             |                               |      _________|_______
+     |             VP                              |     |    |            PP
+     |    _________|__________________             |     |    |     _______|_____
+     |   |         NP                 PP           |     |    |    |             NP
+     |   |    _____|_____          ___|_____       |     |    |    |    _________|______
+     NP  |   |           AP       |         NP     |     |    NP   |   |                AP
+     |   |   |      _____|___     |         |      |     |    |    |   |          ______|___
+     N   V  Det   Adj        N    P         N     Conj   V    N    P  Det       Adj         N
+     |   |   |     |         |    |         |      |     |    |    |   |         |          |
+     i  had  a  country     walk  on     thursday and   came home  in  a      dreadful     mess
+    ```
