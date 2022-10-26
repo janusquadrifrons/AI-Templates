@@ -1,5 +1,5 @@
 # AI-Templates
-Samples for rapid model development.
+Samples from my former studies for rapid model development.
 
 ## CNN
 
@@ -61,7 +61,7 @@ Samples for rapid model development.
 
 #### parser.py
   An assignment (week 6) from AI50.
-  - Function          : Parsnig sentences and extracting context-free grammar by (nltk.punkt) tokenization.
+  - Function          : Parsing sentences and extracting context-free grammar by (nltk.punkt) tokenization.
   - Usage             : Keyboard input or path of .txt file as argument.
   - Dependencies      : nltk<br>
     ↳ pip3 install <em>"dependency"</em><br>
@@ -86,4 +86,19 @@ Samples for rapid model development.
      N   V  Det   Adj        N    P         N     Conj   V    N    P  Det       Adj         N
      |   |   |     |         |    |         |      |     |    |    |   |         |          |
      i  had  a  country     walk  on     thursday and   came home  in  a      dreadful     mess
+    ```
+#### questions.py
+  An assignment (week 6) from AI50.
+  - Function          : Simple AI answering questions by document & passage retrieval.
+  - Usage             : By given path of .txt files as argument.
+  - Dependencies      : nltk<br>
+    ↳ pip3 install <em>"dependency"</em><br>
+    ↳ import nltk # in case of missing data load nltk data downloader<br>
+    ↳ nltk.donwload()<br>
+    
+    ##### Example :    
+    ```
+    PS E:\98_cs\cs50\lecture_6\questions> python questions.py corpus
+    Query: When was Python 3.0 released?
+    Python 3.0 was released on 3 December 2008.  
     ```
